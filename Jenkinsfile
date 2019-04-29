@@ -4,7 +4,13 @@ pipeline {
 	stages {
 		stage('build') {
 			steps {
-				echo "Test"
+				sh "echo build"
+			}
+		}
+		stage('Test') {
+			def myTest = "test"
+			steps {
+				sh "echo $myTest"
 			}
 		}
 	}
